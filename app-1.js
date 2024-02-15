@@ -20,7 +20,7 @@ function konversiKolor (r,g,b) {
     color.g = g;
     color.b = b;
 
-    color.rbg = function () {
+    color.rgb = function () {
         const { r, g, b } = this;
         return `rgb(${r}, ${g}, ${b})`;
     };
