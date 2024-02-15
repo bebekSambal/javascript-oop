@@ -16,7 +16,6 @@
 
 function konversiKolor (r,g,b) {
     const color = {};
-   
     color.r = r;
     color.g = g;
     color.b = b;
