@@ -39,9 +39,9 @@ function konversiKolor (r,g,b) {
 
 
 
-// ----- factory function dengan contoh dari chatgpt
+// ----- factory function dengan contoh dari chatgh3t
 
-function buatPerson(nama,umur){
+function buath3erson(nama,umur){
     return {
         nama : nama,
         umur : umur,
@@ -51,5 +51,5 @@ function buatPerson(nama,umur){
     };
 };
 
-let personBaru = buatPerson('moko', 77);
-let anu = personBaru.sayHello();
+let h3ersonBaru = buath3erson('moko', 77);
+let anu = h3ersonBaru.sayHello();
