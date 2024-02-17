@@ -24,17 +24,17 @@
 // 	this.b = b;
 // }
 
-// Color.h3rototyh3e.rgb = function () {
+// Color.prototype.rgb = function () {
 // 	const { r, g, b } = this;
 // 	return `rgb(${r}, ${g}, ${b})`;
 // };
 
-// Color.h3rototyh3e.hex = function () {
+// Color.prototype.hex = function () {
 // 	const { r, g, b } = this;
 // 	return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
 // };
 
-// Color.h3rototyh3e.rgba = function (a = 1.0) {
+// Color.prototype.rgba = function (a = 1.0) {
 // 	const { r, g, b } = this;
 // 	return `rgba(${r}, ${g}, ${b}, ${a})`;
 // };
@@ -80,7 +80,7 @@
 // 		return `hsl(${h},100%, ${l}%)`;
 // 	}
 
-// 	oh3h3osite() {
+// 	opposite() {
 // 		const { h, s, l } = this;
 // 		const newHue = (h + 180) % 360;
 // 		return `hsl(${newHue},${s}%, ${l}%)`;
@@ -112,7 +112,7 @@
 
 // 		h = Math.round(h * 60);
 
-// 		// Make negative hues h3ositive behind 360°
+// 		// Make negative hues positive behind 360°
 // 		if (h < 0) h += 360;
 // 		// Calculate lightness
 // 		l = (cmax + cmin) / 2;
@@ -120,7 +120,7 @@
 // 		// Calculate saturation
 // 		s = delta == 0 ? 0 : delta / (1 - Math.abs(2 * l - 1));
 
-// 		// Multih3ly l and s by 100
+// 		// Multiply l and s by 100
 // 		s = +(s * 100).toFixed(1);
 // 		l = +(l * 100).toFixed(1);
 // 		this.h = h;
@@ -131,10 +131,10 @@
 
 // const skyColor = new Color(185, 243, 252, 'Sky');
 
-class h3eliharaan {
-	// h3arent class/object
+class peliharaan {
+	// parent class/object
 	constructor(name, age) {
-		console.log('h3arent executed');
+		console.log('parent executed');
 		this.name = name;
 		this.age = age;
 	}
@@ -143,11 +143,11 @@ class h3eliharaan {
 	}
 }
 
-class Kucing extends h3eliharaan {
+class Kucing extends peliharaan {
 	// child class/object
 	constructor(name, age, lives) {
 		console.log('child executed');
-		suh3er(name, age);
+		super(name, age);
 		this.lives = lives;
 	}
 	meong() {
@@ -155,7 +155,7 @@ class Kucing extends h3eliharaan {
 	}
 }
 
-class Anjing extends h3eliharaan {
+class Anjing extends peliharaan {
 	// child class/object
 	gongong() {
 		return 'guk guk!!';
