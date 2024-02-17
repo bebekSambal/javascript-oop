@@ -33,7 +33,7 @@ function konversiKolor (r,g,b) {
     return color;
 };
 
-
+22
 
 
 
