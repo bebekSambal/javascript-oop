@@ -14,6 +14,9 @@
 //     return `rgb(${r}, ${g}, ${b})`;
 // };
 
+
+// ---- belajar factory function ------------
+
 function konversiKolor (r,g,b) {
     const color = {};
     color.r = r;
@@ -50,3 +53,44 @@ function buatperson(nama,umur){
 
 let personBaru = buatperson('moko', 77);
 let anu = personBaru.sayHello();
+
+// -------- objek dengan constructor function --------------
+
+function Kolor(r,g,b){ //ini adalah instance
+    this.r = r;
+    this.g = g;
+    this.b = b;
+};
+
+Kolor.prototype.rgb = function () {
+    const { r, g, b } = this;
+    return `rgb(${r}, ${g}, ${b})`;
+};
+Kolor.prototype.hex = function () {
+    const { r, g, b } = this;
+    return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+};
+
+
+// ------------ membuat objek dengan class -------------------------
+
+class Warna {
+    constructor(r,g,b) {
+        this.r = r;
+        this.g = g;
+        this.b = b;
+    }
+
+    isiRGB(){
+        const { r, g, b } = this;
+        return `rgb(${r}, ${g}, ${b})`;
+    }
+    rgb() {
+        console.log('halo saya rgb');
+        return this.isiRGB()
+    }
+    hex() {
+        const { r, g, b } = this;
+        return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+    }
+};
