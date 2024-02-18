@@ -94,3 +94,32 @@ class Warna {
         return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
     }
 };
+
+// penjelasan lebih tentang OOP
+
+class Hewan {
+    constructor(nama,warna){ // inisiasi properti objek
+        this.nama = nama; // properti
+        this.warna = warna; //properti
+    }
+    makan(){
+        return `${this.nama} lagi makan` //metode
+    }
+};
+
+class Kucing extends Hewan{
+    // mau menambah properti namun tidak mengganggu properti parents dan child lainnya
+    constructor (nama,warna, live) { //parameter parent + child "live"
+        super(nama,warna); //memanggil param parents
+        this.live = live;
+    }
+    meong(){
+        return "meooonk .. !"
+    }
+};
+
+class Anjing extends Hewan{
+    gonggong(){
+        return "guk guk !!"
+    }
+};
